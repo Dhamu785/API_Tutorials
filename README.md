@@ -1,2 +1,10 @@
-# API_Tutorials
-This contains all codes related to python API creation
+# **API_Tutorials**
+### **Basics of Networking**
+- `HTTP` - Hyper Text Transfer Protocol
+- `HTTPS` - Hyper Text Transfer Protocol Secure
+- `GET` - Get data from the server
+- `POST` - Send data to the server
+- `PATCH` - Used for updating existing values in the database
+- `PUT` - 
+- `DELETE` - Used o delete items in the db
+### **Python - Fast API**
