@@ -10,4 +10,5 @@
 ### **Python - Fast API** <a style="color:red;" href="https://youtu.be/tLKKmouUams" target="_blank">YouTube</a>
 - GET used to get information from the API Eg: localhost/home
 - Path parameter Eg: localhost/get-std-details/2. Here 2 is student id
-- Query parameter Eg: localhost/get-by-name?name=nick. It search for the name nick. It is not case sensitive.
+- Query parameter Eg: localhost/get-by-name?name=nick. It search for the name nick. It is not case sensitive when calling from direct url and it is sensitive with postman call.
+- Get by both PathParm(pp) and Query Parm(QP) Eg: localhost/get-by-pp-qp/1?name=kali
