@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Path
+from typing import Optional
 
 app = FastAPI()
 
@@ -15,14 +16,16 @@ def home():
 
 # Path parameter
 @app.get("/get-student/{std_id}")
+# def get_student(std_id:int = None):
 def get_student(std_id:int = Path(description="Enter the student id",gt=0,lt=4)):
     return students[std_id]
 
 # Query parameters
 @app.get("/get-by-name")
-def get_by_name(name:str):
+# None is used to make the field is required to not required
+# Here Optional is used to make code readable
+def get_by_name(*, name: Optional[str]=None, test: int): 
     for student_id in students:
-        print(students[student_id]['name'])
         if students[student_id]['name'] == name:
             return students[student_id]
     return{f"{name}": "Not found"}
