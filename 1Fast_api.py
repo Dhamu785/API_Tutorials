@@ -30,3 +30,11 @@ def get_by_name(*, name: Optional[str]=None):
         if students[student_id]['name'] == name:
             return students[student_id]
     return{f"{name}": "Not found"}
+
+# Get by both path parm(pp) and query parm(qp)
+@app.get("/get-by-pp-qp/{std_id}")
+def get_by_name(*, std_id:int , name: Optional[str]=None):
+    for student_id in students:
+        if students[student_id]['name'] == name and student_id==std_id:
+            return students[student_id]
+    return{f"{name}": "Not found"}
