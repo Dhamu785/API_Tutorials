@@ -24,7 +24,8 @@ def get_student(std_id:int = Path(description="Enter the student id",gt=0,lt=4))
 @app.get("/get-by-name")
 # None is used to make the field is required to not required
 # Here Optional is used to make code readable
-def get_by_name(*, name: Optional[str]=None, test: int): 
+# def get_by_name(*, name: Optional[str]=None, test: int): I deleted "test" to run properly
+def get_by_name(*, name: Optional[str]=None):
     for student_id in students:
         if students[student_id]['name'] == name:
             return students[student_id]
