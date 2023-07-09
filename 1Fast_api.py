@@ -6,7 +6,6 @@ students = {
     1:{"name":"kali","age":18,"class":"2nd year"},
     2:{"name":"John","age":17,"class":"1st year"},
     3:{"name":"Rock","age":19,"class":"3rd year"}
-    
 }
 
 @app.get("/")
