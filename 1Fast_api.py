@@ -9,6 +9,11 @@ class Student(BaseModel):
     age : int
     year : str
     
+class UpdateStudents(BaseModel):
+    name : Optional[str]=None
+    age : Optional[int]=None
+    year : Optional[str]=None
+    
 students = {
     1:{"name":"kali","age":18,"year":"2nd year"},
     2:{"name":"John","age":17,"year":"1st year"},
@@ -53,3 +58,17 @@ def add_student(student_id : int, student_details : Student):
     else:
         students[student_id] = student_details
         return{"Sucess":f"Student {student_details.name} added"}
+    
+# Put method used to update already existing data
+@app.put("/update-student/{student_id}")
+def update_student(student_id: int, update_details: UpdateStudents):
+    if student_id not in students:
+        return{"Error":"Student not exists"}
+    else:
+        if update_details.name != None:
+            students[student_id]['name']= update_details.name
+        if update_details.age != None:
+            students[student_id]['age']= update_details.age
+        if update_details.year != None:
+            students[student_id]['year']= update_details.year
+        return{"Succes":"Updated successfully"}
