@@ -1,7 +1,11 @@
 from fastapi import FastAPI, Path
 from typing import Optional
 from pydantic import BaseModel
+import uvicorn
 
+# uvicorn documentation https://www.uvicorn.org/
+# YouTube https://youtu.be/tLKKmouUams
+# Postman(YT) https://youtu.be/VywxIQ2ZXw4
 app = FastAPI()
 
 class Student(BaseModel):
@@ -81,3 +85,6 @@ def delete_student(student_id:int):
     else:
         del students[student_id]
         return{"Message":"Student data deleted successfully"}
+
+if __name__ == "__main__":
+    uvicorn.run("1FreeCodeCamp:app", port=5000, log_level="info",reload=True)
