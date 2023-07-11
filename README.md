@@ -5,7 +5,7 @@
 - `GET` - Get data from the server
 - `POST` - Send data to the server
 - `PATCH` - Used for updating existing values in the database
-- `PUT` - 
+- `PUT` - used to update the existing data
 - `DELETE` - Used o delete items in the db
 ## **Python - Fast API** 
 ### 1. Free Code Camp - <a style="color:blue;" href="https://youtu.be/tLKKmouUams" target="_blank">YouTube</a>
