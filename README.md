@@ -16,5 +16,6 @@
 - Post method used to upload data to the database through API. It values are entered through the body.
 - PUT used to update the existing data.
 - DELETE used to delete the data.
+- To run this script in cmd `uvicorn file_name:app --reload`
 
 ### 2. Bitfumes - <a style="color:blue;" href="[https://youtu.be/tLKKmouUams](https://youtu.be/7t2alSnE2-I)" target="_blank">YouTube</a>
