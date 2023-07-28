@@ -86,5 +86,6 @@ def delete_student(student_id:int):
         del students[student_id]
         return{"Message":"Student data deleted successfully"}
 
+# If the below codes does not exists you can use "uvicorn file_name:app --reload" in the command prompt
 if __name__ == "__main__":
     uvicorn.run("1FreeCodeCamp:app", port=5000, log_level="info",reload=True)
